@@ -32,7 +32,7 @@ const Root = () => {
       </main>
       <footer>
         <Logo />
-        <small>&copy; 2020 Kasa. All rights reserved</small>
+        <p>&copy; 2020 Kasa. All rights reserved</p>
       </footer>
     </>
   );
