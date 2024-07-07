@@ -1,4 +1,4 @@
-$mobile-breakpoint: 767.98px;
+@import "./variables.scss";
 
 * {
   font-family: Montserrat, sans-serif;
@@ -8,14 +8,20 @@ $mobile-breakpoint: 767.98px;
 body {
   max-width: 1440px;
   margin: auto;
-  padding: 20px;
 }
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 45px 0;
+  padding: 45px 20px;
+  @media (max-width: $mobile-breakpoint) {
+    padding: 20px;
+  }
   svg {
     height: 68px;
+    path {
+      fill: $primary-color;
+    }
     @media (max-width: $mobile-breakpoint) {
       height: 46px;
     }
@@ -25,7 +31,9 @@ header {
     ul {
       display: flex;
       gap: 57px;
-      margin-top: 17px;
+      @media (max-width: $mobile-breakpoint) {
+        gap: 26px;
+      }
       li {
         list-style: none;
         a {
@@ -33,7 +41,7 @@ header {
           text-decoration: none;
           font-weight: 500;
           @media (max-width: $mobile-breakpoint) {
-            font-size: 17px;
+            font-size: 12px;
             text-transform: uppercase;
           }
           &.active {
@@ -55,7 +63,7 @@ footer {
   gap: 16px;
   font-weight: 500;
   font-size: 24px;
-  @media (max-width: $mobile-breakpoint){
+  @media (max-width: $mobile-breakpoint) {
     font-size: 12px;
   }
 

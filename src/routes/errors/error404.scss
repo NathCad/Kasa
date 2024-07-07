@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+
+#error-404 {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 139px;
+  @media (max-width: $mobile-breakpoint) {
+    $padding-gap: 100px;
+    padding: $padding-gap 0;
+    gap: $padding-gap;
+  }
+  h1 {
+    font-size: 288px;
+    color: $primary-color;
+    font-weight: 700;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 96px;
+    }
+  }
+  p {
+    font-size: 36px;
+    color: $primary-color;
+    padding: 40px;
+    text-align: center;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 18px;
+    }
+  }
+  a {
+    padding: 40px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+  }
+}

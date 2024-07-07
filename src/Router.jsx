@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Root from "./routes/root/Root";
+import Root from "./Root";
 import Error404 from "./routes/errors/Error404";
 import APropos from "./routes/aPropos/APropos";
 import Accueil from "./routes/accueil/Accueil";

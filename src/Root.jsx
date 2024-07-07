@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import Logo from "../../assets/Logo";
+import Logo from "./assets/Logo";
 import "./root.scss";
 
 const Root = () => {
