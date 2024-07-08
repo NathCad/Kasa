@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Root from "./Root";
 import Error404 from "./routes/errors/Error404";
@@ -12,7 +12,12 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Root />}>
           <Route index element={<Accueil />} />
-          <Route path="aPropos" element={<APropos />} />
+          <Route
+            path="aPropos"
+            element={
+              <APropos />
+            }
+          />
           <Route path="appartements/:id" element={<Appartement />} />
           <Route path="*" element={<Error404 />} />
         </Route>
