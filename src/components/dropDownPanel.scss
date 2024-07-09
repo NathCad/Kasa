@@ -1,3 +1,63 @@
 @import "/src/variables.scss";
 
-.drop-down-panel {}
+.drop-down-panel {
+  //etat fermé
+  $transition: all 700ms ease-in-out;
+  background-color: $light-background-color;
+  border-radius: 5px;
+  h1 {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 24px;
+    color: white;
+    background-color: $primary-color;
+    border-radius: 5px;
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      svg {
+        transform: rotate(0deg);
+        transition: $transition;
+      }
+    }
+  }
+  .drop-down-panel-content {
+    * {
+      z-index: 1;
+      position: relative;
+      top: 0px;
+    }
+    position: relative;
+    top: -32px;
+    transition: $transition;
+    padding: 0 20px;
+    height: 0;
+    font-size: 18px;
+    line-height: 26px;
+    overflow: hidden;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  //etat ouvert
+  &.open {
+    h1 {
+      button {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .drop-down-panel-content {
+      top: 0px;
+      padding: 20px;
+      height: auto;
+    }
+  }
+}
