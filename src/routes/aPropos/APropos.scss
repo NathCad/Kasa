@@ -14,9 +14,9 @@
     border-radius: 25px;
     opacity: 70%;
     object-fit: cover;
-    @media(max-width:$mobile-breakpoint){
-        height: 111px;
-        border-radius: 10px;
+    @media (max-width: $mobile-breakpoint) {
+      height: 111px;
+      border-radius: 10px;
     }
   }
   #page-a-propos-content {
@@ -25,11 +25,10 @@
     flex-direction: column;
     gap: $gap-padding;
     padding: $gap-padding 200px;
-    @media(max-width:$mobile-breakpoint){
-        $gap-padding: 19px;
-        gap: $gap-padding;
-        padding: $gap-padding 0;
+    @media (max-width: $mobile-breakpoint) {
+      $gap-padding: 19px;
+      gap: $gap-padding;
+      padding: $gap-padding 0;
     }
   }
 }
-
