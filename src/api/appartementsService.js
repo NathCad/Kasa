@@ -1,11 +1,13 @@
 export async function getAppartements() {
-  return json.map((item) => {
-    item.id, item.cover, item.title;
-  });
+  return json.map((item) => ({
+    id: item.id,
+    cover: item.cover,
+    title: item.title,
+  }));
 }
 
 export async function getAppartement(id) {
-  return json.filter((item) => item.id === id);
+  return json.find((item) => item.id === id);
 }
 
 const json = [

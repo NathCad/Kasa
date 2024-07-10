@@ -1,0 +1,7 @@
+@import "/src/variables.scss";
+
+#page-appartement {
+    @media (max-width: $mobile-breakpoint) {
+        padding: 20px 19px 0 19px;  
+    }
+}

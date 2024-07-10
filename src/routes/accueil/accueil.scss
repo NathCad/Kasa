@@ -1,7 +1,7 @@
 @import "/src/variables.scss";
 
-#accueil{
-  $border-radius:25px;
+#page-accueil {
+  $border-radius: 25px;
   $padding-gap: 50px;
   display: flex;
   flex-direction: column;
@@ -10,14 +10,17 @@
   gap: $padding-gap;
   @media (max-width: $mobile-breakpoint) {
     padding: 20px 19px 0 19px;
+    $border-radius: 10px;
+    $padding-gap: 22px;
+    gap: $padding-gap;
   }
-  h1{
+  h1 {
     background-image: url("/coteSauvage.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-blend-mode: darken;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 223px;
     border-radius: $border-radius;
@@ -27,18 +30,66 @@
     font-size: 48px;
     line-height: 68px;
     color: white;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 0 black;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 16px;
+      height: 111px;
+    }
   }
   .gallery {
+    
     width: 100%;
-    border-radius:$border-radius ;
+    border-radius: $border-radius;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $padding-gap;
     padding: $padding-gap;
     background-color: $light-background-color;
     margin: 0 0 $padding-gap 0;
-
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+      background-color: transparent;
+      padding: 0;
+      
+    }
+    a {
+      $border-radius: 10px;
+      height: 100%;
+      border-radius: $border-radius;
+      padding: 20px;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.2)
+        ),
+        $primary-color;
+      background-blend-mode: multiply;
+      background-size: cover;
+      text-decoration: none;
+      article {
+        img {
+          border-radius: $border-radius;
+          height: 270px;
+          width: 100%;
+          object-fit: cover;
+          @media (max-width: $mobile-breakpoint) {
+            height: 185px;
+          }
+        }
+        h2 {
+          font-size: 18px;
+          color: white;
+          padding: 5px 0 0 0;
+          line-height: 25px;
+          @media (max-width: $mobile-breakpoint) {
+            font-size: 18px;            
+          }
+        }
+      }
+    }
   }
 }
