@@ -1,7 +1,9 @@
 @import "./variables.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,11 +16,12 @@ body {
     padding: 0px;
   }
 }
+$header-main-padding: 20px;
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 45px 20px;
+  padding: 45px $header-main-padding;
   @media (max-width: $mobile-breakpoint) {
     padding: 20px;
   }
@@ -55,6 +58,12 @@ header {
         }
       }
     }
+  }
+}
+main {
+  padding: 0 $header-main-padding $header-main-padding $header-main-padding;
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0;
   }
 }
 footer {

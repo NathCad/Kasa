@@ -1,0 +1,27 @@
+@import "/src/variables.scss";
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  .avatar-title {
+    font-size: 18px;
+    line-height: 25px;
+    color: $primary-color;
+    text-align: right;
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+  img {
+    $image-size: 64px;
+    border-radius: 50%;
+    width: $image-size;
+    height: $image-size;
+    @media(max-width: $mobile-breakpoint) {
+      $image-size: 32px;
+      width: $image-size;
+      height: $image-size;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import DropDownPanel from "../../components/DropDownPanel";
 import "./APropos.scss";
+import DropDownPanel from './../../components/dropDownPanel/DropDownPanel';
 
 
 const APropos = () => {

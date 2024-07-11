@@ -1,7 +1,97 @@
 @import "/src/variables.scss";
 
 #page-appartement {
-    @media (max-width: $mobile-breakpoint) {
-        padding: 20px 19px 0 19px;  
+  @media (max-width: $mobile-breakpoint) {
+    padding: 20px 19px 0 19px;
+  }
+  .page-appartement-content {
+    $margin-gap: 36px;
+    margin: 30px 0 0 0;
+    .page-appartement-content-title-host-rating-tags {
+      $rating-size: calc((25px * 5) + (10px * 4));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @media (max-width: $mobile-breakpoint) {
+        $margin-gap: 18px;
+      }
+      gap: $margin-gap;
+      h1 {
+        font-size: 36px;
+        line-height: 51px;
+        color: $primary-color;
+        font-weight: 500;
+        p {
+          font-size: 18px;
+          line-height: 25px;
+          color: black;
+          font-weight: 500;
+          @media (max-width: $mobile-breakpoint) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        @media (max-width: $mobile-breakpoint) {
+          width: 100%;
+          font-size: 18px;
+          line-height: 25px;
+        }
+      }
+      .avatar {
+        @media (max-width: $mobile-breakpoint) {
+          order: 4;
+        }
+      }
+      .tags {
+        width: calc(100% - $rating-size - $margin-gap);
+        @media (max-width: $mobile-breakpoint) {
+          order: 2;
+          width: 100%;
+        }
+      }
+      .rating {
+        width: $rating-size;
+        @media (max-width: $mobile-breakpoint) {
+          width: auto;
+          order: 3;
+        }
+      }
     }
+    .page-appartement-content-description-equipements {
+      $gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: $margin-gap 0 0 0;
+      .page-appartement-content-description,
+      .page-appartement-content-equipements {
+        width: calc(50% - 10px);
+        * {
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .drop-down-panel-title {
+          font-weight: 700;
+          height: 52px;
+          @media (max-width: $mobile-breakpoint) {
+           height: 30px;
+          }
+        }
+        li {
+          font-weight: 400;
+          list-style: none;
+        }
+        @media (max-width: $mobile-breakpoint) {
+          * {
+            font-size: 13px;
+            line-height: 18px;
+          }
+          width: 100%;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
 }

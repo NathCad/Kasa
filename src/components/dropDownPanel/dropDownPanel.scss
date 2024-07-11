@@ -5,7 +5,7 @@
   $transition: all 700ms ease-in-out;
   background-color: $light-background-color;
   border-radius: 5px;
-  h1 {
+  .drop-down-panel-title {
     position: relative;
     z-index: 2;
     display: flex;
@@ -16,6 +16,7 @@
     color: white;
     background-color: $primary-color;
     border-radius: 5px;
+    height: 32px;
     button {
       background-color: transparent;
       border: none;
@@ -23,6 +24,12 @@
       svg {
         transform: rotate(0deg);
         transition: $transition;
+      }
+    }
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 13px;
+      svg {
+        width: 16px;
       }
     }
   }
@@ -47,7 +54,7 @@
   }
   //etat ouvert
   &.open {
-    h1 {
+    .drop-down-panel-title {
       button {
         svg {
           transform: rotate(180deg);

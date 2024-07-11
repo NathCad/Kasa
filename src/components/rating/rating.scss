@@ -1,0 +1,19 @@
+@import "/src/variables.scss";
+.rating {
+  display: flex;
+  gap: 10px;
+  @media (max-width: $mobile-breakpoint) {
+    gap: 7px;
+  }
+  .active {
+    path {
+      fill: $primary-color;
+    }
+  }
+  svg {
+    @media (max-width: $mobile-breakpoint) {
+      width: 13.41px;
+      height: 13px;
+    }
+  }
+}
