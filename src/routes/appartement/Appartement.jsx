@@ -20,7 +20,7 @@ const Appartement = () => {
         <div className="page-appartement-content-title-host-rating-tags">
           <h1>
             {appartement.title}
-            <p>{appartement.location}</p>
+            <span>{appartement.location}</span>
           </h1>
           <Avatar
             name={appartement.host.name}

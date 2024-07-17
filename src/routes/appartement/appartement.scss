@@ -23,7 +23,8 @@
         line-height: 51px;
         color: $primary-color;
         font-weight: 500;
-        p {
+        span {
+          display: block;
           font-size: 18px;
           line-height: 25px;
           color: black;

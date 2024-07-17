@@ -1,6 +1,6 @@
 import React from "react";
 import "./accueil.scss";
-import Appartement from "./../appartement/Appartement";
+
 import { Link, useLoaderData } from "react-router-dom";
 
 const Accueil = () => {
