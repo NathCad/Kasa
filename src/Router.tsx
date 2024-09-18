@@ -1,18 +1,17 @@
-import React, { useState } from "react";
 import {
-  BrowserRouter,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-  Routes,
 } from "react-router-dom";
 import Root from "./Root";
-import Error404 from "./routes/errors/Error404";
-import APropos from "./routes/aPropos/APropos";
 import Accueil from "./routes/accueil/Accueil";
 import Appartement from "./routes/appartement/Appartement";
 import { getAppartement, getAppartements } from "./api/appartementsService";
+import Error404 from "./routes/errors/Error404";
+import APropos from "./routes/aPropos/APropos";
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(

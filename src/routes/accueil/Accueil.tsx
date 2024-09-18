@@ -1,10 +1,9 @@
-import React from "react";
 import "./accueil.scss";
-
+import { AppartementSummaryDTO } from "../../api/appartementsService";
 import { Link, useLoaderData } from "react-router-dom";
 
 const Accueil = () => {
-  const appartements = useLoaderData();
+  const appartements = useLoaderData() as AppartementSummaryDTO[];
   return (
     <section id="page-accueil">
       <h1>Chez vous, partout et ailleurs</h1>

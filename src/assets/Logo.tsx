@@ -1,4 +1,6 @@
-const Logo = (props) => {
+import { HTMLAttributes } from "react";
+
+const Logo = (props: HTMLAttributes<SVGElement>) => {
   return (
     <svg
       viewBox="0 0 211 68"

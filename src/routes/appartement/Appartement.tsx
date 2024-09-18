@@ -1,15 +1,16 @@
 import React from "react";
 import "./appartement.scss";
 
-import { useLoaderData } from "react-router-dom";
 import Carousel from "../../components/carousel/Carousel";
 import DropDownPanel from "../../components/dropDownPanel/DropDownPanel";
 import Avatar from "../../components/avatar/Avatar";
-import Tags from "./../../components/tags/Tags";
+import Tags from "../../components/tags/Tags";
 import Rating from "../../components/rating/Rating";
+import { AppartementDTO } from "../../api/appartementsService";
+import { useLoaderData } from "react-router-dom";
 
 const Appartement = () => {
-  const appartement = useLoaderData();
+  const appartement = useLoaderData() as AppartementDTO;
   return (
     <section id="page-appartement">
       <Carousel

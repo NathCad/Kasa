@@ -1,13 +1,16 @@
-import React from "react";
 import "./rating.scss";
 import Star from "../../assets/Star";
 
-const Rating = ({ rating }) => {
+type RatingProps = {
+  rating: string
+}
+
+const Rating = ({ rating }: RatingProps) => {
     
   return (
     <div className={"rating"}>
       {[1, 2, 3, 4, 5].map((r) => (
-        <Star key={"rating" + r} className={rating >= r ? "active" : ""} />
+        <Star key={"rating" + r} className={Number(rating) >= r ? "active" : ""} />
       ))}
     </div>
   );

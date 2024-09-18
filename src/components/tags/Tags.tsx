@@ -1,7 +1,10 @@
-import React from "react";
 import "./tags.scss";
 
-const Tags = ({ tags }) => {
+type TagProps = {
+  tags: string[]
+}
+
+const Tags = ({ tags }:TagProps) => {
   return (
     <ul className="tags">
       {tags.map((item, idx) => (

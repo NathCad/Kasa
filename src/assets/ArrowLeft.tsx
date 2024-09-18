@@ -1,4 +1,6 @@
-const ArrowLeft = (props) => {
+import { HTMLAttributes } from "react";
+
+const ArrowLeft = (props:HTMLAttributes<SVGElement> ) => {
   return (
     <svg
       width="48"

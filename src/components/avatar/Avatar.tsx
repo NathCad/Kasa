@@ -1,7 +1,12 @@
-import React from "react";
 import "./avatar.scss";
 
-const Avatar = ({ name, image, heading = "h1" }) => {
+type AvatarProps = {
+  name: string,
+  image: string,
+  heading?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+
+const Avatar = ({ name, image, heading = "h1" }: AvatarProps) => {
   const Heading = heading;
   return (
     <article className="avatar">

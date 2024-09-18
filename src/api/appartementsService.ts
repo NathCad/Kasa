@@ -1,4 +1,27 @@
-export async function getAppartements() {
+export type AppartementSummaryDTO = {
+  id: string;
+  cover: string;
+  title: string;
+}
+
+export type AppartementDTO = {
+  id: string;
+  title: string;
+  cover: string;
+  pictures: string[];
+  description: string;
+  host: {
+      name: string;
+      picture: string;
+  };
+  rating: string;
+  location: string;
+  equipments: string[];
+  tags: string[];
+}
+
+
+export async function getAppartements(): Promise<AppartementSummaryDTO[]> {
   return json.map((item) => ({
     id: item.id,
     cover: item.cover,
@@ -6,8 +29,8 @@ export async function getAppartements() {
   }));
 }
 
-export async function getAppartement(id) {
-  return json.find((item) => item.id === id);
+export async function getAppartement(id?: string): Promise<AppartementDTO | null> {
+  return json.find((item) => item.id === id) ?? null;
 }
 
 const json = [

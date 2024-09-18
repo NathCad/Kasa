@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./carousel.scss";
 import ArrowLeft from "../../assets/ArrowLeft";
 import ArrowRight from "../../assets/ArrowRight";
 
-const Carousel = ({ data, appartementName }) => {
+
+type CarouselProps= {
+  data: string[],
+  appartementName: string
+}
+
+const Carousel = ({ data, appartementName }: CarouselProps) => {
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const showControls = data.length > 1;
   return (

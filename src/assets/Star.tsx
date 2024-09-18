@@ -1,6 +1,6 @@
-import React from "react";
+import { HTMLAttributes } from "react";
 
-const Star = (props) => {
+const Star = (props: HTMLAttributes<SVGElement>) => {
   return (
     <svg
       width="25"

@@ -1,5 +1,6 @@
-import React from "react";
-export const Arrow = (props) => {
+import { HTMLAttributes } from "react";
+
+export const Arrow = (props : HTMLAttributes<SVGElement>) => {
   return (
     <svg
       width="33"

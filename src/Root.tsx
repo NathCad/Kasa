@@ -1,13 +1,13 @@
-import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Logo from "./assets/Logo";
 import "./root.scss";
 
+
+
 const Root = () => {
   const location = useLocation();
-  const isActive = (pathname) =>
+  const isActive = (pathname: string) =>
     location.pathname === pathname ? "active" : "";
-
   return (
     <>
       <header>
